@@ -1,7 +1,8 @@
 import pyexcel as p
 import pymysql.cursors
+
 if __name__ == '__main__':
-	connection = pymysql.connect(host='123.58.7.80',
+    connection = pymysql.connect(host='123.58.7.80',
                              port=3306,
                              user='sk_admin',
                              password='skmm94bgsn',
