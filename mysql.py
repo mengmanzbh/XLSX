@@ -1,7 +1,8 @@
 import pymysql.cursors
 
 # Connect to the database
-connection = pymysql.connect(host='123.58.7.80:3306',
+connection = pymysql.connect(host='123.58.7.80',
+                             port=3306,
                              user='sk_admin',
                              password='skmm94bgsn',
                              db='tgapp_excel',
@@ -14,8 +15,6 @@ try:
         sql = "INSERT INTO `airport_city_triple_code` (`airport_code`, `airport_name`, `city_code`, `city_name`, `country`) VALUES (%s, %s, %s, %s, %s)"
         cursor.execute(sql, ('1', '2', '3', '4', '5'))
 
-    # connection is not autocommit by default. So you must commit to save
-    # your changes.
     connection.commit()
 finally:
     connection.close()
