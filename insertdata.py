@@ -17,3 +17,5 @@ if __name__ == '__main__':
                 sql = "INSERT INTO `airport_city_triple_code` (`airport_code`, `airport_name`, `city_code`, `city_name`, `country`) VALUES (%s, %s, %s, %s, %s)"
                 cursor.execute(sql, (record['A'], record['B'], record['C'], record['D'], record['E']))
             connection.commit()
+        finally:
+            connection.close()
