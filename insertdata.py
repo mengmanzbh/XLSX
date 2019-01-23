@@ -18,4 +18,5 @@ if __name__ == '__main__':
                 cursor.execute(sql, (record['A'], record['B'], record['C'], record['D'], record['E']))
             connection.commit()
         finally:
+            print("********************")
             # connection.close()
